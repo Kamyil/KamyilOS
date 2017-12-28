@@ -1,0 +1,1188 @@
+
+body {
+    margin: 0 !important;
+    background-color: #101010;
+    font-family: 'Roboto', sans-serif;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   transition-duration: 1s;
+
+}
+
+.StartScreen{
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    z-index: 7;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.9) 47%,rgba(255,255,255,0.7) 100%);
+    position: fixed;
+    
+}
+.KamyilStartLogoFull{
+    width: 40%;
+    display: none;
+  
+ margin-left: auto;
+ margin-right: auto;
+    margin-top: 10vh;
+    z-index: 9;
+    position: absolute;
+   left: 0;
+    right: 0;
+
+}
+.KamyilStartLogoEmpty{
+    width: 40%;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 10vh;
+    z-index: 9;
+    position: fixed;
+   animation-name: ScaleLogo;
+   animation-duration: 3s;
+   animation-delay: 1s;
+   
+    
+
+}
+#KamyilOSText{
+font-size: 7vh; 
+text-align: center; 
+font-weight: 300;
+display: none;
+margin-top: 75vh;
+position: relative;
+}
+#subTitleIntro{
+    font-size: 3vh; 
+text-align: center; 
+font-weight: 300;
+display: none;
+
+position: relative;
+}
+.UpperBar {
+    position: absolute;
+    right: 0%;
+    width: 7vh;
+    height: 3vh;
+    z-index: 2;
+    background: inherit;
+    text-align: right;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 .1em 1em rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.UpperBar::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: inherit;
+    box-shadow: inset 0 0 1000px rgba(255, 255, 255, 0.6);
+    filter: blur(30%);
+    -webkit-filter: blur(30%);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    -o-filter: blur(20px);
+    margin: -20px;
+}
+
+
+.taskbar {
+    position: fixed;
+    width: 102vh;
+    bottom: 0%;
+    height: 7vh;
+  border-radius: 5px;
+background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.7) 47%,rgba(255,255,255,0.8) 100%);
+    z-index: 2;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    
+    margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+transition-duration: 0.25s;
+    animation-name: SlideDownIn;
+    animation-delay: 6.25s;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;  
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+.CloseButton {
+    position: relative;
+    top: 7px;
+    right: 0;
+    z-index: 3;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.oMnieProgram .CloseButtonOmnie {
+    position: absolute;
+    top: 0.1vh;
+    left: 0vh;
+    width: 30px;
+    z-index: 8;
+    padding: 8px;
+    
+    border-radius: 5px;
+}
+.oMnieProgram .CloseButtonOmnie:active {
+    transform: scale(0.9);
+    transition-duration: 0.25s;
+
+}
+.CloseButtonDark {
+    position: relative;
+    top: 8px;
+    right: 0;
+    z-index: 3;
+    padding: 8px;
+    border-radius: 5px;
+    color: #f3f3f3;
+}
+
+.CloseButton:hover {
+    cursor: pointer;
+    background-color: #d82020;
+    color: aliceblue;
+    transition-duration: 0.25s;
+}
+
+.CloseButton:active {
+    transform: scale(0.3);
+    background-color: #911313;
+}
+
+.flexscroll{
+    width: 10%;
+
+
+
+}
+.calculatorProgram {
+    position: fixed;
+    max-width: 300px;
+    min-width: 310px;
+    height: 600px;
+    z-index: 1;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 .1em 1em rgba(0, 0, 0, .3);
+    cursor: move;
+        background-color: rgba(250,250,250,0.1);
+}
+
+.calculatorProgram::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    box-shadow: inset 0 0 3000px rgba(255, 255, 255, 0.95);
+    filter: blur(30px);
+    margin: -20px;
+}
+.calculatorProgramDark{
+
+
+    
+}
+.calculatorProgramDark::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    box-shadow: inset 0 0 3000px rgba(10, 10, 10, 0.95);
+    filter: blur(30px);
+    margin: -20px;
+
+
+}
+.Title {
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    padding-top: 6px;
+    background-color: rgba(250,250,250,0.8);
+    -webkit-box-shadow: 0px 10px 42px -13px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 10px 42px -13px rgba(0,0,0,0.1);
+box-shadow: 0px 10px 42px -13px rgba(0,0,0,0.1);
+    bottom: 19px;
+    backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+.oMnieProgram .TitleOmnie{
+     position: sticky;
+  text-align: center;
+   top: 0;
+    font-weight: 500;
+    border-radius: 5px;
+   width: 100%;
+    height: 30px;
+    background-color: rgba(250,250,250,0.9);
+    -webkit-box-shadow: 0px 10px 42px -13px rgba(0,0,0,0.8);
+-moz-box-shadow: 0px 10px 42px -13px rgba(0,0,0,0.49);
+box-shadow: 10px 10px 42px -13px rgba(0,0,0,0.8);
+
+
+ 
+
+}
+.TitleDark{
+    text-align: center;
+    font-weight: 500;
+    border-radius: 5px;
+    padding-bottom: 4px;
+    padding-top: 6px;
+    background-color: rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 10px 42px -13px rgba(0,0,0,0.49);
+-moz-box-shadow: 0px 10px 42px -13px rgba(0,0,0,0.49);
+box-shadow: 0px 10px 42px -13px rgba(0,0,0,0.40);
+    bottom: 19px;
+    color: #f4f4f4;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+}
+.calculatorDisplay {
+    font-weight: 700;
+    font-size: 48px;
+    margin-top: 20%;
+    float: right;
+    margin-right: 10%;
+}
+
+.numbers {
+    width: 350px;
+    position: absolute;
+    bottom: 0%;
+    z-index: 2;
+}
+
+.number {
+    z-index: 2;
+    width: 50px;
+    float: left;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 1px;
+    font-weight: 700;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.numberDark{
+       z-index: 2;
+       color: #f3f3f3;
+    width: 50px;
+    float: left;
+    text-align: center;
+    background-color: #202020;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 1px;
+    font-weight: 400;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.number:hover {
+    background-color: #c4ffff;
+    transition-duration: 0.25s;
+    cursor: pointer;
+}
+
+.number:active {
+    transform: scale(0.95);
+    background-color: #6effff;
+}
+.numberDark:hover{
+    background-color: #303030;
+    transition-duration: 0.25s;
+    border-radius: 1px; 
+
+}
+.numberDark:active{
+    transform: scale(0.95);
+    background-color: #505050;
+    transition-duration: 0.25s;
+    border-radius: 1px;
+}
+.Math {
+    background-color: #a2ffff;
+    z-index: 2;
+    width: 50px;
+    float: left;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 1px;
+    font-weight: 700;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.Math:hover {
+    background-color: #4bffff;
+    cursor: pointer;
+}
+
+.Math:active {
+    background-color: #32b1b1;
+}
+
+.searchButton {
+    height: 2vh;
+    width: 4vh;
+    font-size: 2vh;
+    color: aliceblue;
+    transform: rotateY(180deg);
+    align-items: center;
+}
+
+.searchButton:hover {
+    color: #00aaaa;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.searchBar {
+    transform: rotateY(180deg);
+    display: none;
+    width: 10vh;
+    font-family: 'Roboto';
+    position: relative;
+    bottom: 3.4vh;
+    right: 11vh;
+    transition-duration: 1s;
+    border: 1px solid #101010;
+}
+
+.searchBar input {
+    height: 5vh;
+    font-weight: 300;
+    width: 30vh;
+    border-radius: 5px;
+    border: none;
+    background-color: #202020;
+    text-align: center;
+}
+
+.Date {
+    position: relative;
+    color: #101010;
+    bottom: 4em;
+    font-size: 18px;
+    left: 29%;
+    font-size: 14px;
+}
+
+#clock {
+    height: 100%;
+    font-weight: 500;
+    color: #000;
+    position: absolute;
+    font-size: 2vh;
+    width: 4%;
+    text-align: center;
+    left: 0.9vh;
+    padding-right: 3%;
+}
+
+#clock:hover {
+    transition-duration: 0.20s;
+    color: #00aaaa;
+    cursor: pointer;
+}
+
+.calculatorIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    margin-left: 14vh;
+    z-index: 3;
+    float: left;
+}
+
+.calculatorIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+.calculatorIcon:active {
+    cursor: pointer;
+    transform: scaleZ(2.0);
+    transition-duration: 0.25s;
+}
+
+.OmnieIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    z-index: 3;
+}
+
+.OmnieIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+    z-index: 6;
+}
+.oMnieProgram{
+     position: relative;
+   overflow-y: auto;
+    width: 300px;
+    height: 500px;
+    z-index: 3;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    
+      background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.7) 47%,rgba(255,255,255,0.5) 100%);
+
+    cursor: move;
+
+
+}
+
+
+.SketchIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 21vh;
+    z-index: 3;
+}
+
+.SketchIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+    z-index: 6;
+}
+
+.CodeIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 28vh;
+    z-index: 3;
+}
+
+.CodeIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+.FlappyTrainIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 35vh;
+    z-index: 3;
+}
+
+.FlappyTrainIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+.MapIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 42vh;
+    z-index: 3;
+}
+
+.MapIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+.RocketIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 49vh;
+    z-index: 3;
+}
+
+.RocketIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+.CameraIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 56vh;
+    z-index: 3;
+}
+
+.CameraIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+#nightIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 63vh;
+    z-index: 3;
+}
+
+#nightIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+#nightIcon:active {
+    cursor: pointer;
+    transform: scaleZ(2.0);
+    transition-duration: 0.25s;
+}
+
+#SunIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 63vh;
+    z-index: 3;
+}
+
+#SunIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+#SunIcon:active {
+    cursor: pointer;
+    transform: scale(0.9);
+    transition-duration: 0.25s;
+}
+
+.BugIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 70vh;
+    z-index: 3;
+}
+
+.BugIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+.OpiniaIcon {
+    width: 7vh;
+    position: absolute;
+        bottom: 0%;
+    float: left;
+    margin-left: 77vh;
+    z-index: 3;
+}
+
+.OpiniaIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+.TrashIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 84vh;
+    z-index: 3;
+}
+
+.TrashIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+.VolumeIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 91vh;
+    z-index: 3;
+}
+
+.SettingsIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 91vh;
+    z-index: 3;
+}
+
+.SettingsIcon:hover {
+    
+    cursor: pointer;
+    transition-duration: 0.15s;
+}
+
+.ToDoIcon {
+    width: 7vh;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    margin-left: 7vh;
+    z-index: 3;
+}
+
+.ToDoIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.25s;
+}
+
+.ToDoIcon:active {
+    cursor: pointer;
+    transform: scale(1);
+    transition-duration: 0.25s;
+}
+@keyframes SlideDownIn {
+    0% {
+        margin-bottom: -8%;
+    }
+    100% {
+        margin-bottom: 0%;
+    }
+}
+
+
+@keyframes ScaleLogo{
+    0%{
+        transform:scale(1);
+    }
+    100%{
+        transform: scale(20);
+    }
+
+
+}
+
+
+
+.ToDoProgram {
+    position: relative;
+   
+    width: 456px;
+    height: 560px;
+    z-index: 3;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    
+      background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.7) 47%,rgba(255,255,255,0.5) 100%);
+
+    cursor: move;
+        
+}
+
+
+.ToDoProgramDark{
+ position: fixed;
+    width: 456px;
+    height: 605px;
+    z-index: 1;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.7) 47%,rgba(0,0,0,0.5) 100%);
+    color: #f3f3f3;
+    box-sizing: border-box;
+    box-shadow: 0 .1em 1em rgba(0, 0, 0, .3);
+    cursor: move;
+}
+
+
+.ToDo {
+    width: 60%;
+  
+}
+
+.submitToDO {
+    background-color: rgb(255, 99, 92);
+    border: none;
+    border-radius: 5px;
+    padding: 2%;
+    color: aliceblue;
+     box-shadow: 0 .5em 1em rgba(0, 0, 0, .2);
+    margin-left: 1%;
+    font-size: 90%;
+}
+.submitToDO:hover {
+	background-color: rgb(250, 81, 74);
+    transition-duration: 0.25s;
+}
+.submitToDO:active {
+	transform: scale(0.9);
+    transition-duration: 0.25s;
+}
+
+.inputToDo {
+    width: 60%;
+    margin-left: 20%;
+    padding: 2%;
+    background: inherit;
+    border: none;
+    z-index: 2;
+    overflow: hidden;
+    margin-top: 1%;
+    box-sizing: border-box;
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.1);
+    rit;
+    border-radius: 5px;
+    text-align: center;
+        background-color: rgba(250,250,250,0.3);
+}
+
+.inputToDo::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    box-shadow: inset 0 0 3000px rgba(255, 255, 255, 0.9);
+    filter: blur(99%);
+    margin: -20px;
+
+}
+.inputToDo:focus{
+box-shadow: 0 .5em 1em rgba(0, 0, 0, .5);
+transition-duration: 0.4s;
+    transform: skew(2);
+
+}
+
+.ToDoList {
+	margin-left: 5%;
+    width: 90%;
+    margin-top: 5%;
+     overflow:auto;
+    position: relative;
+}
+.ToDoActivity {
+       
+	width: 90%;
+    background-color: rgba(255, 99, 92,0.9);
+    margin-top: 5%;
+    list-style: none;
+    margin-left: 5%;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: aliceblue;
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, .2);
+     
+}
+.ToDoActivity:hover {
+	background-color: rgb(248, 78, 70);
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+.DeleteActivity {
+	
+    
+    
+    float: right;
+   padding: 3px; 
+    border-radius: 5px;
+   
+    position: relative;
+}
+.DeleteActivity:hover {
+    background-color: rgb(234, 46, 38);
+    transition-duration: 0.25s;
+    cursor: pointer;
+    
+}
+
+.warning{
+color: brown;
+
+}
+.BugReportProgram {
+    position: absolute;
+    width: 438px;
+    height: 674px;
+    z-index: 1;
+    
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 .1em 1em rgba(0, 0, 0, .3);
+    cursor: move;
+}
+.BugReportProgram::before {
+	
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    box-shadow: inset 0 0 3000px rgba(255, 255, 255, 0.95);
+    filter: blur(30px);
+    margin: -20px;
+ 
+}
+#FlappyTrainProgram {
+	    position: absolute;
+    width: 500px;
+    height: 700px;
+    z-index: 3;
+    
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 .1em 1em rgba(0, 0, 0, .3);
+    cursor: move;
+}
+
+#FlappyTrainProgram::before {
+	content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    box-shadow: inset 0 0 3000px rgba(255, 255, 255, 0.95);
+    filter: blur(30px);
+    margin: -20px;
+}
+.robak{
+font-size: 200px;
+    width: 40%;
+    margin-left: 5%;
+    
+    float: left;
+}
+.BugText{
+float: left;
+width: 40%;
+margin: 3%;
+    text-align: center;
+
+}
+.BugText2 {
+	position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+width: 80%;
+    text-align: center;
+
+}
+#BugTextArea {
+	position: relative;
+    width: 90%;
+    height: 10%;
+    margin-left: 5%;
+        overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 .1em 1em rgba(0, 0, 0, .3);
+    cursor: move;
+    background: inherit;
+    border: none;
+}
+#BugTextArea::before {
+	    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    box-shadow: inset 0 0 3000px rgba(255, 255, 255, 0.95);
+    filter: blur(30px);
+    margin: -20px;
+}
+#BugTextArea:hover {
+	cursor: pointer;
+     box-shadow: 0 .1em 1em rgba(0, 0, 0, .5);
+    transition-duration: 0.25s;
+}
+.opiniaProgram{
+  position: absolute;
+    width: 500px;
+    height: 700px;
+    z-index: 3;
+    
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    cursor: move;
+}
+.opiniaProgram::before{
+content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    box-shadow: inset 0 0 3000px rgba(255, 0, 0, 0.90);
+    filter: blur(30px);
+    margin: -20px;
+}
+.CameraProgram{
+ position: absolute;
+    width: 450px;
+    height: 500px;
+    z-index: ;
+    float: left;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    cursor: move;
+    background-color: rgba(250,250,250,0.4);
+
+}
+.CameraProgram::before{
+content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    box-shadow: inset 0 0 3000px rgba(250, 250, 250, 0.99);
+    filter: blur(10px);
+    margin: -10px;
+
+}
+
+#snap{
+    z-index: 50;
+    position: relative;
+    left: 200px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgba(250,250,250,0.5);
+    border: 1px solid #505050;
+    
+}
+#snap:hover{
+   background-color: rgba(250,250,250,0.9);
+  
+    border: 1px solid #101010;
+      transition-duration: 0.25s;
+}
+#snap:active{
+    transform: scale(0.9);
+    transition-duration: 0.25s;
+}
+
+.effects{
+  
+    position: absolute;
+    top: 448px;
+    left: 0px;
+    z-index: 5;
+    background-color: rgba(250,250,250,0);
+    border-radius: 5px;
+    border: none;
+    padding: 17px;
+    font-weight: 700;
+}
+.effects:hover{
+    background-color: rgba(250,250,250,0.2);
+    transition-duration: 0.25s;
+
+
+}
+.effects:active{
+    transform: scale(0.90);
+    transition-duration: 0.25s;
+
+}
+.showPictures{
+position: absolute;
+top: 450px;
+    left: 400px;
+    font-size: 24px;
+    padding: 11px;
+ 
+    border-radius: 5px;
+}
+.showPictures:hover{
+    background-color: rgba(250,250,250,0.2);
+    transition-duration: 0.25s;
+    cursor: pointer;
+}
+.showPictures:active{
+    transform: scale(0.90);
+    transition-duration: 0.25s;
+
+}
+/*----------------------------------------Dark Themes-------------------------------------------------------*/
+.UpperBarDark {
+    position: absolute;
+    right: 0%;
+    width: 7vh;
+    color: #fff;
+    height: 3vh;
+    z-index: 2;
+    background: inherit;
+    text-align: right;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 .1em 1em rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.UpperBarDark::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: inherit;
+    box-shadow: inset 0 0 1000px rgba(0, 0, 0, 0.6);
+    filter: blur(30%);
+    -webkit-filter: blur(30%);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    -o-filter: blur(20px);
+    margin: -20px;
+}
+.taskbarDark{
+  position: fixed;
+    width: 102vh;
+    bottom: 0%;
+    height: 7vh;
+  border-radius: 5px;
+background: linear-gradient(to bottom, rgba(10,10,10,0.8) 0%,rgba(10,10,10,0.7) 47%,rgba(10,10,10,0.8) 100%);
+    z-index: 2;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    
+    margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+transition-duration: 0.25s;
+      animation-name: SlideDownIn;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out; 
+}
+
+#clockDark{
+
+    height: 100%;
+    font-weight: 500;
+    color: #f3f3f3;
+    position: absolute;
+    font-size: 2vh;
+    width: 4%;
+    text-align: center;
+    left: 0.9vh;
+    padding-right: 1%;
+
+
+
+    
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>KamyilOS</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700,900" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.js'></script>
+        <script src="rotate.js"></script>
+       
+        
+    </head>
+    <body style="background: url(img/ic4qgE7.png) no-repeat center center fixed">
+
+        <div class="SystemContainer">
+        <div class="StartScreen"> 
+            <img src="img/Kamyil_CV_Full.png" alt="My Logo" class="KamyilStartLogoFull">
+         
+        <p id="KamyilOSText">KamyilOS</p>
+            
+        <p id="subTitleIntro">Creating interfaces of tommorow</p>
+
+
+
+
+        </div>
+          <img src="img/Kamyil_CV_Empty.png"  class="KamyilStartLogoEmpty" alt="My Logo">
+            <div class="UpperBar">
+                <div id="clock"></div>
+            </div>
+
+            <div class="taskbar" style="margin-bottom: -8vh;">
+            <div class="icons">
+                <img src="img/oMnieIcon.png" alt="" class="OmnieIcon" value="0">
+                <img src="img/TodoIcon.png" alt="" class="ToDoIcon" value="1">
+                <img src="img/SketchIcon.png" alt="" class="SketchIcon" value="2">
+                <img src="img/CodeIcon.png" alt="" class="CodeIcon" value="3">
+                <img src="img/FlappyTrainIcon.png" alt="" class="FlappyTrainIcon" value="4">
+                <img src="img/MapIcon.png" alt="" class="MapIcon" value="5">
+                <img src="img/RocketIcon.png" alt="" class="RocketIcon" value="6">
+                <img src="img/calculator.png" alt="" class="calculatorIcon" value="7">
+                <img src="img/KawaIcon.png" alt="" class="CameraIcon" value="8" onclick="startCanvas()">
+                <img src="img/nightIcon.png" alt="" id="nightIcon" value="9"> 
+                <img src="img/BugIcon.png" alt="" class="BugIcon" value="10">
+                <img src="img/opiniaIcon.png" alt="" class="OpiniaIcon" value="11">
+                <img src="img/TrashIcon.png" alt="" class="TrashIcon" value="12">
+                
+                <img src="img/VolumeCircle.png" alt="" class="SettingsIcon" value="13">
+                </div>
+            </div>
+
+            <div class="calculatorProgram">
+                <span class="lnr lnr-cross CloseButton"></span>
+                <div class="col-lg-12 col-md-12 Title">Kalkulator</div>
+                <div class="calculatorDisplay" id="display"></div>
+                <div class="numbers">
+                    <input class="number" value="1" type="button" onclick='math("1")'>
+                    <input class="number" value="2" type="button" onclick='math("2")'>
+                    <input class="number" value="3" type="button" onclick='math("3")'>
+                    <input class="number" value="4" type="button" onclick='math("4")'>
+                    <input class="number" value="5" type="button" onclick='math("5")'>
+                    <input class="number" value="6" type="button" onclick='math("6")'>
+                    <input class="number" value="7" type="button" onclick='math("7")'>
+                    <input class="number" value="8" type="button" onclick='math("8")'>
+                    <input class="number" value="9" type="button" onclick='math("9")'>
+                    <input class="number" value="0" type="button" onclick='math("0")'>
+                    <input class="number Math" value="+" type="button" onclick='math("+")'>
+                    <input class="number Math" value="-" type="button" onclick='math("-")'>
+                    <input class="number Math" value="X" type="button" onclick='math("*")'>
+                    <input class="number Math" value="/" type="button" onclick='math("/")'>
+                    <input class="number Math" value="." type="button" onclick='math(".")'>
+                    <input class="number Math" value="%" type="button" onclick='math("%")'>
+                    <input class="number Math" value="C" type="button" onclick='c("")'>
+                    <input class="number Math" value="(" type="button" onclick='math("(")'>
+                    <input class="number Math" value=")" type="button" onclick='math(")")'>
+                    <input class="number Math" value="=" type="button" onclick='suma()'>
+                </div>
+            </div>
+            <!-- SUKCES!!! -->
+            <div class="ToDoProgram">
+                <span class="lnr lnr-cross CloseButton"></span>
+                <div class="col-lg-12 col-md-12 Title">ToDo</div>
+                
+                <div class="form-inline" style="margin-top: 5%;">
+                    <h3 class="text-center" style="font-weight: 300;">Dodaj czynność do wykonania</h3>
+                    <div class="ToDoInput">
+                        <input type="text" placeholder="Wpisz tutaj co chcesz zrobić" class="inputToDo">
+                        <button type="submit" class="submitToDO">Dodaj</button>
+                    </div>
+                </div>
+                <ul id="handle" class="ToDoList">
+                    <li class="ToDoActivity">Pobaw się apkami na moim portfolio
+                        <div class="lnr lnr-cross DeleteActivity"></div>
+                    </li>
+                    <li class="ToDoActivity">Dodaj zadanie w apce ToDo
+                        <div class="lnr lnr-cross DeleteActivity"></div>
+                    </li>
+                    <li class="ToDoActivity">Zagraj w FlappyTrain
+                        <div class="lnr lnr-cross DeleteActivity"></div>
+                    </li>
+                    <li class="ToDoActivity">Zagraj w RocketInvaders
+                        <div class="lnr lnr-cross DeleteActivity"></div>
+                    </li>
+                    <li class="ToDoActivity">Włącz tryb nocny
+                        <div class="lnr lnr-cross DeleteActivity"></div>
+                    </li>
+                    <li class="ToDoActivity">Przejrzyj ranking kaw
+                        <div class="lnr lnr-cross DeleteActivity"></div>
+                    </li>
+                    <li class="ToDoActivity">Podziel się opinią :)
+                        <div class="lnr lnr-cross DeleteActivity"></div>
+                    </li>
+                <audio id="audio" src="img/ding.wav" autostart="false"></audio>
+            </ul>
+            <h5 class="text-center" style="margin-top: 5%"> <span class="lnr lnr-star"></span>&nbsp; &nbsp;Kliknij po prostu w zadanie, jeżeli je ukończyłeś</h5>
+            
+        </div>
+        <div class="BugReportProgram">
+            <span class="lnr lnr-cross CloseButton"></span>
+            <div class="col-lg-12 col-md-12 Title">Zgłoś robaka</div>
+            <div class="lnr lnr-bug robak"></div>
+            <p class="text-center BugText">
+                Bugi... po polsku mówiąc robaki, czyli błędy pojawiające się na stronie. Największa zmora programistów, którzy przelewając wiele...kubków kawy, zwalczają je w nadzieji o dobrze wyświetlające się elementy na stronie.
+            </p>
+            <p class="text-center BugText2">
+                Zatem już rozumiesz dlaczego tak ważne dla nas - programistów... jest zgłaszanie błędów. Pozwala nam to na dopracowanie wszystkich najmniejszych niedociągnięć programu/strony, tak aby ten był stabilny i nieawaryjny. Jeżeli znajdziesz jakiegoś buga na stronie - Proszę, opisz mi go poniżej, a ja go rozwiążę :)
+                
+            </p>
+            
+            <textarea name="" id="BugTextArea"></textarea>
+            <p class="text-center BugText2">Zanim wyślesz, powiedz mi jeszcze jakiej przeglądarki używasz :)</p>
+        
+            <input type="text" name="browser" class="BugBrowserInput">
+        </div>
+        <div id="FlappyTrainProgram">
+            <span class="lnr lnr-cross CloseButton"></span>
+            <div class="col-lg-12 col-md-12 Title">FlappyTrain</div>
+            <div class="sketch">
+                
+            
+
+
+            </div>
+            
+        </div>
+        <div class="oMnieProgram">
+           
+            <div class="Title TitleOmnie">
+ <div class="lnr lnr-cross CloseButton CloseButtonOmnie"></div>
+ <div class="flexcroll"></div>
+            O mnie</div>
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti doloribus labore, dicta, a, vero inventore veniam odio similique architecto sequi tempora ad quam illo. Consequatur, fuga, itaque? Inventore, in, veniam.</div>
+                   <div>Magni ratione pariatur error quae eos non blanditiis rem laboriosam ea neque vero aliquid accusamus, nulla amet quos, repellendus inventore assumenda facere! Iste harum assumenda unde, rem culpa libero ea.</div>
+                   <div>Omnis porro delectus dolorem amet cum fugit quasi minus voluptatem voluptatum eos beatae, tempore ipsum facilis sed quidem culpa perferendis odio ullam quibusdam consequuntur provident alias vel. Odit, suscipit, illum.</div>
+                   <div>Reprehenderit consequatur sunt similique ullam earum maiores, veniam quas beatae ex inventore! Rem necessitatibus quo vero quia, commodi repudiandae possimus quibusdam sit dolore quos, sunt provident quis expedita incidunt, nihil!</div>      
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius rerum earum necessitatibus quidem atque asperiores, odit consequuntur quam facilis omnis nesciunt minus nam totam soluta, reprehenderit, itaque aperiam dolore molestiae.</div>
+<div>Exercitationem magni iure quas officiis nesciunt saepe dolorem, iste magnam illo consectetur delectus ab quis est suscipit minus nisi fugit necessitatibus soluta, debitis. Fugit temporibus ut eligendi saepe, voluptatem vero.</div>
+<div>Dolor alias quo debitis dolores obcaecati excepturi, rem dolorum commodi quos nobis. Amet in, necessitatibus minima omnis quae, nostrum, quidem veritatis, est debitis magnam deleniti harum consequuntur laborum. Ipsum, fugiat.</div>
+<div>Vitae accusantium, voluptas architecto dolores necessitatibus, culpa consectetur delectus quia labore minima. Iure, eius id illum vitae earum quos, cupiditate inventore consectetur, cum, odit maxime quisquam rerum deserunt nemo vero.</div>
+
+
+
+                    </div>
+        <div class="CameraProgram">
+             <span class="lnr lnr-cross CloseButton"></span>
+            <div class="col-lg-12 col-md-12 Title">Aparat</div>
+        
+             <div id="CameraScreen">
+             <div class="showPictures"><span class="lnr lnr-picture"></span></div>
+                <button class="effects">Efekty</button>
+             </div>
+         
+        </div>
+
+        <div class="opiniaProgram">
+             <button class="lnr lnr-cross CloseButton"></button>
+            <div class="col-lg-12 col-md-12 Title">Opinia</div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+    <!--<div class="settingsWindow">
+        <h4 style="font-weight: 300;">Ustawienia</h4>
+        
+
+
+    </div> -->
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 		<script type='text/javascript' src="flexcroll.js"></script>
+        <script src="kalkulator.js"></script>
+        <script src="CameraProgram.js"></script>
+        <script src="oMnie.js"></script>
+
+        <script src="FlappyTrain.js"></script>
+        <script src="FlappyTrainGame.js"></script>
+        <script src="pipe.js"></script>
+        <script src="Train.js"></script>
+        <script src="clock.js"></script>
+        <script src="clockProgram.js"></script>
+        <script src="ToDo.js"></script>
+        <script src="BugReport.js"></script>
+        <script src="DarkMode.js"></script>
+        <script src="taskbar.js"></script>
+        <script src="startscreen.js"></script>
+       
+         <script src="opiniaProgram.js"></script>
+         
+         <script src="settings.js"></script>
+          <script src="CameraScreen.js"></script>
+          <!--<script src="apID.js"></script>-->
+        <script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+        </script>
+    </body>
+</html>
